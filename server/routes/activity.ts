@@ -6,8 +6,13 @@ const router = Router();
 
 // GET /api/activity (Admin only: audit log)
 router.get('/', requireAdminAuth, (_req: AuthenticatedRequest, res: Response) => {
-  const activities = db.getActivities();
-  res.json(activities);
+  try {
+    const activities = db.getActivities();
+    res.json(activities);
+  } catch (err) {
+    console.error('[Activity API Error] Failed to get activities:', err);
+    res.status(500).json([]);
+  }
 });
 
 export default router;

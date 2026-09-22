@@ -18,7 +18,8 @@ import {
   Share2,
   Loader2,
   Send,
-  Flag
+  Flag,
+  RefreshCw
 } from 'lucide-react';
 import { AppItem, Review } from '../types.js';
 import { AppCard } from '../components/common/AppCard.js';
@@ -32,6 +33,7 @@ export function AppDetailPage() {
   const [related, setRelated] = useState<AppItem[]>([]);
   const [reviews, setReviews] = useState<Review[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [isDbUnavailable, setIsDbUnavailable] = useState(false);
   const [isRedirecting, setIsRedirecting] = useState(false);
   const [copiedLink, setCopiedLink] = useState(false);
 
@@ -56,6 +58,7 @@ export function AppDetailPage() {
   useEffect(() => {
     async function loadAppDetails() {
       setIsLoading(true);
+      setIsDbUnavailable(false);
       try {
         const res = await fetch(`/api/apps/slug/${slug}`);
         if (res.ok) {
@@ -66,11 +69,17 @@ export function AppDetailPage() {
 
           // Update page title
           document.title = `${data.app.name} v${data.app.version} Download - HushAPK`;
+        } else if (res.status === 404) {
+          setApp(null);
+          setIsDbUnavailable(false);
         } else {
           setApp(null);
+          setIsDbUnavailable(true);
         }
       } catch (err) {
         console.error('Failed to load app:', err);
+        setApp(null);
+        setIsDbUnavailable(true);
       } finally {
         setIsLoading(false);
       }
@@ -182,6 +191,36 @@ export function AppDetailPage() {
   }
 
   if (!app) {
+    if (isDbUnavailable) {
+      return (
+        <div className="text-center py-20 px-4 max-w-lg mx-auto">
+          <div className="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center mx-auto mb-4">
+            <AlertTriangle className="w-6 h-6" />
+          </div>
+          <h2 className="text-2xl font-bold text-white">Database Unavailable</h2>
+          <p className="text-slate-400 mt-2 mb-6 text-sm">
+            App details are temporarily unavailable. Please try again later.
+          </p>
+          <div className="flex items-center justify-center gap-3">
+            <button
+              onClick={() => window.location.reload()}
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-sm transition-colors border border-slate-700"
+            >
+              <RefreshCw className="w-4 h-4" />
+              <span>Retry</span>
+            </button>
+            <Link
+              to="/apps"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm transition-colors"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              <span>Browse All Apps</span>
+            </Link>
+          </div>
+        </div>
+      );
+    }
+
     return (
       <div className="text-center py-20">
         <h2 className="text-2xl font-bold text-white">Application Not Found</h2>

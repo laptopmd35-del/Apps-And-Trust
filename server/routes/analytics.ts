@@ -6,8 +6,20 @@ const router = Router();
 
 // GET /api/analytics (Admin only: real statistics)
 router.get('/', requireAdminAuth, (_req: AuthenticatedRequest, res: Response) => {
-  const stats = db.getAnalytics();
-  res.json(stats);
+  try {
+    const stats = db.getAnalytics();
+    res.json(stats);
+  } catch (err) {
+    console.error('[Analytics API Error] Failed to retrieve analytics:', err);
+    res.status(500).json({
+      totalClicks: 0,
+      todayClicks: 0,
+      totalApps: 0,
+      totalCategories: 0,
+      clicksOverTime: [],
+      topApps: []
+    });
+  }
 });
 
 export default router;

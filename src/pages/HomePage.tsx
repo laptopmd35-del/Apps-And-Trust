@@ -14,7 +14,8 @@ import {
   Lock,
   Zap,
   Star,
-  Download
+  Download,
+  AlertTriangle
 } from 'lucide-react';
 import { AppItem, Category } from '../types.js';
 import { AppCard } from '../components/common/AppCard.js';
@@ -27,9 +28,11 @@ export function HomePage() {
   const [latestApps, setLatestApps] = useState<AppItem[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [dbError, setDbError] = useState(false);
 
   useEffect(() => {
     async function loadData() {
+      setDbError(false);
       try {
         const [appsRes, gamesRes, latestRes, catsRes] = await Promise.all([
           fetch('/api/apps?featured=true&limit=6'),
@@ -41,7 +44,10 @@ export function HomePage() {
         if (appsRes.ok) {
           const data = await appsRes.json();
           setFeaturedApps(data.data || []);
+        } else {
+          setDbError(true);
         }
+
         if (gamesRes.ok) {
           const data = await gamesRes.json();
           setTrendingGames(data.data || []);
@@ -56,6 +62,7 @@ export function HomePage() {
         }
       } catch (err) {
         console.error('Failed to load homepage data:', err);
+        setDbError(true);
       } finally {
         setIsLoading(false);
       }
@@ -160,6 +167,14 @@ export function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Database Failure Notification */}
+      {dbError && (
+        <div className="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-300 text-xs sm:text-sm flex items-center justify-center gap-2.5 shadow-sm">
+          <AlertTriangle className="w-4 h-4 shrink-0 text-amber-400" />
+          <span>Apps are temporarily unavailable. Please try again later.</span>
+        </div>
+      )}
 
       {/* Featured Apps Section */}
       <section className="space-y-6">

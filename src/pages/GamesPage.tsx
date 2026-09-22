@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { Gamepad2, Search, ArrowUpDown, RefreshCw, Trophy } from 'lucide-react';
+import { Gamepad2, Search, ArrowUpDown, RefreshCw, Trophy, AlertTriangle } from 'lucide-react';
 import { AppItem, Category } from '../types.js';
 import { AppCard } from '../components/common/AppCard.js';
 import { Breadcrumbs } from '../components/common/Breadcrumbs.js';
@@ -10,6 +10,7 @@ export function GamesPage() {
   const [games, setGames] = useState<AppItem[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [dbError, setDbError] = useState(false);
 
   const selectedCategory = searchParams.get('category') || '';
   const selectedSort = searchParams.get('sort') || 'downloads';
@@ -19,6 +20,7 @@ export function GamesPage() {
   useEffect(() => {
     async function loadData() {
       setIsLoading(true);
+      setDbError(false);
       try {
         const queryParams = new URLSearchParams();
         queryParams.set('isGame', 'true');
@@ -34,13 +36,17 @@ export function GamesPage() {
         if (gamesRes.ok) {
           const data = await gamesRes.json();
           setGames(data.data || []);
+        } else {
+          setDbError(true);
         }
+
         if (catsRes.ok) {
           const cats = await catsRes.json();
           setCategories((cats || []).filter((c: Category) => c.isGame));
         }
       } catch (err) {
         console.error('Failed to load games:', err);
+        setDbError(true);
       } finally {
         setIsLoading(false);
       }
@@ -150,6 +156,14 @@ export function GamesPage() {
           </select>
         </div>
       </div>
+
+      {/* Database Failure Notification */}
+      {dbError && (
+        <div className="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-300 text-xs sm:text-sm flex items-center justify-center gap-2.5">
+          <AlertTriangle className="w-4 h-4 shrink-0 text-amber-400" />
+          <span>Apps are temporarily unavailable. Please try again later.</span>
+        </div>
+      )}
 
       {/* Games Grid */}
       {isLoading ? (

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import {
   LayoutDashboard,
   Layers,
@@ -38,6 +38,7 @@ import { AppFormModal } from '../../components/admin/AppFormModal.js';
 
 export function AdminDashboard() {
   const navigate = useNavigate();
+  const location = useLocation();
   const { user, token, logout, isAuthenticated } = useAuth();
   const { settings, updateSettings } = useSettings();
 
@@ -51,6 +52,7 @@ export function AdminDashboard() {
   const [analytics, setAnalytics] = useState<AnalyticsSummary | null>(null);
   const [activity, setActivity] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [loadError, setLoadError] = useState(false);
 
   // App Modal State
   const [isAppModalOpen, setIsAppModalOpen] = useState(false);
@@ -93,8 +95,41 @@ export function AdminDashboard() {
     setSiteSettings(settings);
   }, [settings]);
 
+  useEffect(() => {
+    const path = location.pathname.toLowerCase();
+    if (path === '/admin/apps/new') {
+      setActiveTab('apps');
+      setEditingApp(null);
+      setIsAppModalOpen(true);
+    } else if (path.startsWith('/admin/apps/') && path.endsWith('/edit')) {
+      setActiveTab('apps');
+      const parts = path.split('/');
+      const editId = parts[3];
+      if (editId && apps.length > 0) {
+        const found = apps.find((a) => a.id === editId);
+        if (found) {
+          setEditingApp(found);
+          setIsAppModalOpen(true);
+        }
+      }
+    } else if (path.startsWith('/admin/apps')) {
+      setActiveTab('apps');
+    } else if (path.startsWith('/admin/categories')) {
+      setActiveTab('categories');
+    } else if (path.startsWith('/admin/reviews')) {
+      setActiveTab('reviews');
+    } else if (path.startsWith('/admin/reports')) {
+      setActiveTab('reports');
+    } else if (path.startsWith('/admin/settings') || path.startsWith('/admin/users')) {
+      setActiveTab('settings');
+    } else if (path.startsWith('/admin/analytics') || path.startsWith('/admin/activity') || path === '/admin') {
+      setActiveTab('overview');
+    }
+  }, [location.pathname, apps]);
+
   const loadAllAdminData = async () => {
     setIsLoading(true);
+    setLoadError(false);
     try {
       const headers = { Authorization: `Bearer ${token}` };
       const [appsRes, catsRes, revRes, repRes, analRes, actRes] = await Promise.all([
@@ -109,6 +144,8 @@ export function AdminDashboard() {
       if (appsRes.ok) {
         const d = await appsRes.json();
         setApps(d.data || []);
+      } else {
+        setLoadError(true);
       }
       if (catsRes.ok) {
         const d = await catsRes.json();
@@ -132,6 +169,7 @@ export function AdminDashboard() {
       }
     } catch (err) {
       console.error('Failed to load admin data:', err);
+      setLoadError(true);
     } finally {
       setIsLoading(false);
     }
@@ -422,6 +460,22 @@ export function AdminDashboard() {
           </button>
         </div>
       </div>
+
+      {/* Database/Service Error Alert */}
+      {loadError && (
+        <div className="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-300 text-xs sm:text-sm flex items-center justify-between gap-3 shadow-sm">
+          <div className="flex items-center gap-2.5">
+            <AlertTriangle className="w-4 h-4 shrink-0 text-amber-400" />
+            <span>Database or administrative services are temporarily unavailable. Please retry.</span>
+          </div>
+          <button
+            onClick={() => loadAllAdminData()}
+            className="px-3 py-1.5 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 text-amber-200 text-xs font-bold transition-colors shrink-0"
+          >
+            Retry
+          </button>
+        </div>
+      )}
 
       {/* Navigation Tabs */}
       <div className="flex items-center gap-2 overflow-x-auto pb-2 border-b border-slate-800/60 scrollbar-none">

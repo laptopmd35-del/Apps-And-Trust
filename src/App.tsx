@@ -90,6 +90,16 @@ export default function App() {
                     {/* Admin Routes */}
                     <Route path="/admin/login" element={<AdminLoginPage />} />
                     <Route path="/admin" element={<AdminDashboard />} />
+                    <Route path="/admin/apps" element={<AdminDashboard />} />
+                    <Route path="/admin/apps/new" element={<AdminDashboard />} />
+                    <Route path="/admin/apps/:id/edit" element={<AdminDashboard />} />
+                    <Route path="/admin/categories" element={<AdminDashboard />} />
+                    <Route path="/admin/reviews" element={<AdminDashboard />} />
+                    <Route path="/admin/reports" element={<AdminDashboard />} />
+                    <Route path="/admin/users" element={<AdminDashboard />} />
+                    <Route path="/admin/analytics" element={<AdminDashboard />} />
+                    <Route path="/admin/settings" element={<AdminDashboard />} />
+                    <Route path="/admin/activity" element={<AdminDashboard />} />
 
                     {/* 404 Route */}
                     <Route path="*" element={<NotFoundPage />} />

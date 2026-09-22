@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { Layers, Search, Filter, ArrowUpDown, RefreshCw } from 'lucide-react';
+import { Layers, Search, Filter, ArrowUpDown, RefreshCw, AlertTriangle } from 'lucide-react';
 import { AppItem, Category } from '../types.js';
 import { AppCard } from '../components/common/AppCard.js';
 import { Breadcrumbs } from '../components/common/Breadcrumbs.js';
@@ -10,6 +10,7 @@ export function AppsPage() {
   const [apps, setApps] = useState<AppItem[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [dbError, setDbError] = useState(false);
 
   // Filters from query params
   const selectedCategory = searchParams.get('category') || '';
@@ -20,6 +21,7 @@ export function AppsPage() {
   useEffect(() => {
     async function loadData() {
       setIsLoading(true);
+      setDbError(false);
       try {
         const queryParams = new URLSearchParams();
         queryParams.set('isGame', 'false');
@@ -35,13 +37,17 @@ export function AppsPage() {
         if (appsRes.ok) {
           const data = await appsRes.json();
           setApps(data.data || []);
+        } else {
+          setDbError(true);
         }
+
         if (catsRes.ok) {
           const cats = await catsRes.json();
           setCategories((cats || []).filter((c: Category) => !c.isGame));
         }
       } catch (err) {
         console.error('Failed to load apps:', err);
+        setDbError(true);
       } finally {
         setIsLoading(false);
       }
@@ -159,6 +165,14 @@ export function AppsPage() {
           </select>
         </div>
       </div>
+
+      {/* Database Failure Notification */}
+      {dbError && (
+        <div className="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-300 text-xs sm:text-sm flex items-center justify-center gap-2.5">
+          <AlertTriangle className="w-4 h-4 shrink-0 text-amber-400" />
+          <span>Apps are temporarily unavailable. Please try again later.</span>
+        </div>
+      )}
 
       {/* App Listings Grid */}
       {isLoading ? (

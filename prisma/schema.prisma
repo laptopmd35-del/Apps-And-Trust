@@ -1,0 +1,112 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Category {
+  id          String   @id @default(cuid())
+  name        String
+  slug        String   @unique
+  description String?
+  iconName    String?
+  isGame      Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  apps        App[]
+}
+
+model App {
+  id                 String          @id @default(cuid())
+  name               String
+  slug               String          @unique
+  developer          String
+  categoryId         String
+  categoryName       String?
+  category           Category        @relation(fields: [categoryId], references: [id])
+  isGame             Boolean         @default(false)
+  icon               String
+  description        String
+  features           String[]        @default([])
+  screenshots        String[]        @default([])
+  version            String          @default("1.0.0")
+  fileSize           String          @default("25 MB")
+  androidRequirement String          @default("Android 7.0 and up")
+  packageName        String
+  downloadUrl        String
+  rating             Float           @default(4.5)
+  ratingCount        Int             @default(1)
+  downloadCount      Int             @default(0)
+  featured           Boolean         @default(false)
+  published          Boolean         @default(true)
+  whatsNew           String?
+  previousVersions   Json?           @default("[]")
+  createdAt          DateTime        @default(now())
+  updatedAt          DateTime        @updatedAt
+  reviews            Review[]
+  clicks             DownloadClick[]
+}
+
+model Review {
+  id        String   @id @default(cuid())
+  appId     String
+  app       App      @relation(fields: [appId], references: [id], onDelete: Cascade)
+  appName   String?
+  userName  String
+  rating    Int      @default(5)
+  comment   String
+  status    String   @default("pending")
+  createdAt DateTime @default(now())
+}
+
+model Report {
+  id        String   @id @default(cuid())
+  appId     String?
+  appName   String?
+  reason    String
+  details   String
+  reporter  String?
+  status    String   @default("open")
+  createdAt DateTime @default(now())
+}
+
+model DownloadClick {
+  id         String   @id @default(cuid())
+  appId      String
+  app        App      @relation(fields: [appId], references: [id], onDelete: Cascade)
+  appName    String?
+  categoryId String?
+  date       String
+  time       String
+  timestamp  BigInt
+  ipHash     String?
+  userAgent  String?
+  createdAt  DateTime @default(now())
+}
+
+model AdminActivity {
+  id         String   @id @default(cuid())
+  action     String
+  details    String
+  adminEmail String
+  timestamp  DateTime @default(now())
+}
+
+model SiteSetting {
+  id          String   @id @default("default")
+  settings    Json
+  updatedAt   DateTime @updatedAt
+}
+
+model AdminUser {
+  id           String    @id @default(cuid())
+  username     String    @unique
+  email        String    @unique
+  role         String    @default("admin")
+  passwordHash String
+  createdAt    DateTime  @default(now())
+  lastLogin    DateTime?
+}
