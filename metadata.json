@@ -1,0 +1,6 @@
+{
+  "name": "HushAPK",
+  "description": "Safe Apps. Simple Downloads. Premium curated web directory for authentic mobile application details and verified external publisher download links.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

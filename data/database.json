@@ -1,0 +1,727 @@
+{
+  "apps": [
+    {
+      "name": "Google Flow",
+      "slug": "google-flow",
+      "developer": "pc/mobaile",
+      "categoryId": "cat-tools",
+      "isGame": false,
+      "icon": "/uploads/img-1790070536630-d9e1d584df822e65.png",
+      "description": "Detailed application description and capabilities...",
+      "features": [
+        "Clean intuitive interface",
+        "No intrusive ads",
+        "Optimized for high efficiency"
+      ],
+      "screenshots": [
+        "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&auto=format&fit=crop&q=80"
+      ],
+      "version": "1.0.0",
+      "fileSize": "45 MB",
+      "androidRequirement": "Android 8.0+",
+      "packageName": "com.example.app",
+      "downloadUrl": "https://flow.google.com/",
+      "rating": 4.5,
+      "featured": false,
+      "published": true,
+      "whatsNew": "Initial stable release.",
+      "previousVersions": [],
+      "id": "app-1790070152135-wh3p",
+      "categoryName": "Tools",
+      "downloadCount": 2,
+      "ratingCount": 1,
+      "createdAt": "2026-09-22T09:42:32.135Z",
+      "updatedAt": "2026-09-22T09:49:02.343Z"
+    },
+    {
+      "id": "app-vlc",
+      "name": "VLC Media Player",
+      "slug": "vlc-media-player",
+      "developer": "VideoLAN Organization",
+      "categoryId": "cat-media",
+      "categoryName": "Video & Audio",
+      "isGame": false,
+      "icon": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=160&auto=format&fit=crop&q=80",
+      "description": "VLC media player is a free and open source cross-platform multimedia player that plays most multimedia files as well as discs, devices, and network streaming protocols.\n\nThis Android port plays most video and audio files, as well as network streams, network shares and drives, and DVD ISOs. VLC for Android has a full music player, a media database, equalizer and filters, and a multitude of other features.",
+      "features": [
+        "Plays all formats: MKV, MP4, AVI, MOV, Ogg, FLAC, TS, M2TS, Wv and AAC",
+        "Hardware decoding support for smooth 4K/8K playback",
+        "Multi-track audio and subtitles support with auto-download",
+        "Zero spyware, zero ads and no user tracking",
+        "Advanced equalizer with audio presets"
+      ],
+      "screenshots": [
+        "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=800&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop&q=80"
+      ],
+      "version": "3.5.4",
+      "fileSize": "36.8 MB",
+      "androidRequirement": "Android 5.0 and up",
+      "packageName": "org.videolan.vlc",
+      "downloadUrl": "https://get.videolan.org/vlc-android/3.5.4/VLC-Android-3.5.4-arm64-v8a.apk",
+      "rating": 4.8,
+      "ratingCount": 14200,
+      "downloadCount": 452100,
+      "published": true,
+      "featured": true,
+      "whatsNew": "Added playback speed memory per file. Improved Chromecast discovery and fixed SMB2/3 streaming stutter on Android 14+.",
+      "previousVersions": [
+        {
+          "version": "3.5.3",
+          "releaseDate": "2026-04-12",
+          "downloadUrl": "https://get.videolan.org/vlc-android/3.5.3/VLC-Android-3.5.3-arm64-v8a.apk",
+          "fileSize": "36.2 MB"
+        },
+        {
+          "version": "3.5.2",
+          "releaseDate": "2026-01-20",
+          "downloadUrl": "https://get.videolan.org/vlc-android/3.5.2/VLC-Android-3.5.2-arm64-v8a.apk",
+          "fileSize": "35.9 MB"
+        }
+      ],
+      "createdAt": "2026-01-15T10:00:00Z",
+      "updatedAt": "2026-08-10T14:30:00Z"
+    },
+    {
+      "id": "app-telegram",
+      "name": "Telegram Messenger",
+      "slug": "telegram-messenger",
+      "developer": "Telegram FZ-LLC",
+      "categoryId": "cat-communication",
+      "categoryName": "Communication",
+      "isGame": false,
+      "icon": "https://images.unsplash.com/photo-1614680376593-902f749f7ffc?w=160&auto=format&fit=crop&q=80",
+      "description": "Pure instant messaging — simple, fast, secure, and synced across all your devices. Over 900 million active users worldwide.\n\nTelegram delivers messages faster than any other application. Cloud-based architecture gives you seamless access to chats from multiple phones, tablets and computers at once.",
+      "features": [
+        "Unlimited media & document sharing up to 2 GB per file",
+        "End-to-end encrypted Secret Chats with self-destruct timers",
+        "Public & private channels supporting millions of subscribers",
+        "Powerful bot platform for automation and mini-apps",
+        "Custom animated sticker maker and video stories"
+      ],
+      "screenshots": [
+        "https://images.unsplash.com/photo-1616469829941-c7200edec809?w=800&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?w=800&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1534536281715-e28d76689b4d?w=800&auto=format&fit=crop&q=80"
+      ],
+      "version": "10.14.5",
+      "fileSize": "68.4 MB",
+      "androidRequirement": "Android 6.0 and up",
+      "packageName": "org.telegram.messenger.web",
+      "downloadUrl": "https://telegram.org/dl/android/apk",
+      "rating": 4.7,
+      "ratingCount": 38900,
+      "downloadCount": 890400,
+      "published": true,
+      "featured": true,
+      "whatsNew": "Direct APK version with fewer restrictions and automatic in-app updates. Enhanced mini-app performance and group boosts.",
+      "previousVersions": [
+        {
+          "version": "10.14.0",
+          "releaseDate": "2026-05-18",
+          "downloadUrl": "https://telegram.org/dl/android/apk",
+          "fileSize": "67.8 MB"
+        }
+      ],
+      "createdAt": "2026-02-01T08:00:00Z",
+      "updatedAt": "2026-09-02T11:20:00Z"
+    },
+    {
+      "id": "app-obsidian",
+      "name": "Obsidian Notes & Knowledge Base",
+      "slug": "obsidian-notes",
+      "developer": "Dynalist Inc.",
+      "categoryId": "cat-productivity",
+      "categoryName": "Productivity",
+      "isGame": false,
+      "icon": "https://images.unsplash.com/photo-1517842645767-c639042777db?w=160&auto=format&fit=crop&q=80",
+      "description": "Obsidian is a powerful knowledge base on top of a local folder of plain text Markdown files. It acts as a second brain, for you, forever.\n\nIn Obsidian, your notes live on your device, not in the cloud. You own your data. Connect thoughts using bi-directional links, graph views, and hundreds of community plugins.",
+      "features": [
+        "100% local plain text files (Markdown formatted)",
+        "Interactive Graph View showing note connections",
+        "Extensive plugin ecosystem with themes and automations",
+        "Canvas tool for visual mind mapping and brainstorming",
+        "End-to-end encrypted Obsidian Sync support"
+      ],
+      "screenshots": [
+        "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&auto=format&fit=crop&q=80"
+      ],
+      "version": "1.6.7",
+      "fileSize": "18.2 MB",
+      "androidRequirement": "Android 7.0 and up",
+      "packageName": "md.obsidian",
+      "downloadUrl": "https://github.com/obsidianmd/obsidian-releases/releases/download/v1.6.7/Obsidian-1.6.7.apk",
+      "rating": 4.9,
+      "ratingCount": 8200,
+      "downloadCount": 164000,
+      "published": true,
+      "featured": true,
+      "whatsNew": "Faster mobile startup indexing, table formula improvements, and stability fixes for Android 15 edge-to-edge.",
+      "previousVersions": [
+        {
+          "version": "1.6.5",
+          "releaseDate": "2026-03-10",
+          "downloadUrl": "https://github.com/obsidianmd/obsidian-releases/releases",
+          "fileSize": "17.9 MB"
+        }
+      ],
+      "createdAt": "2026-02-10T12:00:00Z",
+      "updatedAt": "2026-08-25T16:00:00Z"
+    },
+    {
+      "id": "app-retroarch",
+      "name": "RetroArch Emulation Suite",
+      "slug": "retroarch-suite",
+      "developer": "Libretro Project",
+      "categoryId": "cat-arcade",
+      "categoryName": "Arcade Games",
+      "isGame": true,
+      "icon": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=160&auto=format&fit=crop&q=80",
+      "description": "RetroArch is an open-source multi-engine emulator frontend that enables you to run classic games on a wide range of devices. Through its modular architecture (Cores), play systems from the golden era of arcade, 8-bit, 16-bit, and 3D consoles.\n\nEquipped with next-frame response time (Run-Ahead), cross-platform netplay, shader filters, and real-time rewind.",
+      "features": [
+        "Universal modular core engine supporting 80+ classic gaming systems",
+        "Run-Ahead latency reduction for responsive inputs",
+        "Advanced CRT and LCD shader pipelines",
+        "Real-time gameplay rewind and automatic state saving",
+        "Full external gamepad support with automatic controller profiling"
+      ],
+      "screenshots": [
+        "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&auto=format&fit=crop&q=80"
+      ],
+      "version": "1.19.1",
+      "fileSize": "54.5 MB",
+      "androidRequirement": "Android 8.0 and up",
+      "packageName": "com.retroarch.aarch64",
+      "downloadUrl": "https://buildbot.libretro.com/stable/1.19.1/android/RetroArch_aarch64.apk",
+      "rating": 4.6,
+      "ratingCount": 19500,
+      "downloadCount": 312000,
+      "published": true,
+      "featured": true,
+      "whatsNew": "Updated Vulkan swapchain handlers. Added fast-forward sound pitch shifting and updated core downloader mirrors.",
+      "previousVersions": [
+        {
+          "version": "1.18.0",
+          "releaseDate": "2026-02-14",
+          "downloadUrl": "https://buildbot.libretro.com/stable/1.18.0/android/RetroArch_aarch64.apk",
+          "fileSize": "53.9 MB"
+        }
+      ],
+      "createdAt": "2026-03-01T09:00:00Z",
+      "updatedAt": "2026-08-15T09:30:00Z"
+    },
+    {
+      "id": "app-asphalt",
+      "name": "Asphalt Legends Racer",
+      "slug": "asphalt-legends-racer",
+      "developer": "Gameloft SE",
+      "categoryId": "cat-racing",
+      "categoryName": "Racing Games",
+      "isGame": true,
+      "icon": "https://images.unsplash.com/photo-1547394765-185e1e68f34e?w=160&auto=format&fit=crop&q=80",
+      "description": "Take the wheel of hypercars from renowned manufacturers like Ferrari, Porsche, Lamborghini and W Motors. Drift through awe-inspiring real-world tracks across Shanghai, San Francisco, the Himalayas, and Cairo.\n\nMaster the revolutionary TouchDrive steering or unleash pure manual controls to outmaneuver rivals in 8-player live multiplayer events.",
+      "features": [
+        "Over 200 officially licensed luxury hypercars to customize and race",
+        "Spectacular HDR visuals, dynamic weather, and particle physics",
+        "Intuitive TouchDrive controls or full manual gyroscope steering",
+        "Dynamic nitro shockwave boosts and 360-degree aerial spins",
+        "Online Club championships and cooperative team syndicates"
+      ],
+      "screenshots": [
+        "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=800&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&auto=format&fit=crop&q=80"
+      ],
+      "version": "4.7.1a",
+      "fileSize": "2.8 GB",
+      "androidRequirement": "Android 9.0 and up",
+      "packageName": "com.gameloft.android.ANMP.GloftA9HM",
+      "downloadUrl": "https://example.com/download/asphalt-legends-installer.apk",
+      "rating": 4.5,
+      "ratingCount": 42000,
+      "downloadCount": 780001,
+      "published": true,
+      "featured": true,
+      "whatsNew": "New Season: Cyber Syndicate featuring futuristic prototype vehicles and Tokyo neon raceways.",
+      "previousVersions": [],
+      "createdAt": "2026-03-15T14:00:00Z",
+      "updatedAt": "2026-09-01T18:00:00Z"
+    },
+    {
+      "id": "app-firefox",
+      "name": "Firefox Fast & Private Browser",
+      "slug": "firefox-browser",
+      "developer": "Mozilla",
+      "categoryId": "cat-tools",
+      "categoryName": "Tools",
+      "isGame": false,
+      "icon": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=160&auto=format&fit=crop&q=80",
+      "description": "Firefox for Android is a lightning-fast, privacy-first web browser backed by the non-profit Mozilla. Block intrusive trackers, enjoy seamless extension add-on support, and sync bookmarks, logins, and open tabs across devices.\n\nExperience total internet freedom with an independent Gecko rendering engine built outside the Chromium monopoly.",
+      "features": [
+        "Comprehensive Enhanced Tracking Protection blocking 2,000+ trackers",
+        "Full desktop-grade Add-on extension support (uBlock Origin, Dark Reader)",
+        "Customizable toolbar position (top or bottom of screen)",
+        "Seamless multi-device sync with zero knowledge encryption",
+        "Integrated reader mode for distraction-free articles"
+      ],
+      "screenshots": [
+        "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop&q=80"
+      ],
+      "version": "128.0.2",
+      "fileSize": "92.1 MB",
+      "androidRequirement": "Android 5.0 and up",
+      "packageName": "org.mozilla.firefox",
+      "downloadUrl": "https://download.mozilla.org/?product=fennec-latest&os=android&lang=multi",
+      "rating": 4.7,
+      "ratingCount": 31000,
+      "downloadCount": 540000,
+      "published": true,
+      "featured": false,
+      "whatsNew": "Security hardening, smoother page zooming animations, and improved battery efficiency when streaming background audio.",
+      "previousVersions": [
+        {
+          "version": "128.0.0",
+          "releaseDate": "2026-07-09",
+          "downloadUrl": "https://download.mozilla.org/?product=fennec-latest&os=android&lang=multi",
+          "fileSize": "91.8 MB"
+        }
+      ],
+      "createdAt": "2026-01-20T11:00:00Z",
+      "updatedAt": "2026-08-30T10:00:00Z"
+    },
+    {
+      "id": "app-subway-surfers",
+      "name": "Subway Surfers World Tour",
+      "slug": "subway-surfers",
+      "developer": "SYBO Games",
+      "categoryId": "cat-arcade",
+      "categoryName": "Arcade Games",
+      "isGame": true,
+      "icon": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=160&auto=format&fit=crop&q=80",
+      "description": "DASH as fast as you can! DODGE the oncoming trains! Help Jake, Tricky & Fresh escape from the grumpy Inspector and his dog in the most popular endless runner of all time.\n\nGrind trains with your cool crew, jump on hoverboards, and surf colorful subways across the globe.",
+      "features": [
+        "Grind trains with your cool high-tech crew",
+        "Colorful and vivid HD graphics with fluid acrobatics",
+        "Hoverboard surfing and paint-powered jetpacks",
+        "Lightning-fast swipe acrobatics",
+        "Monthly World Tour updates visiting new iconic cities"
+      ],
+      "screenshots": [
+        "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&auto=format&fit=crop&q=80"
+      ],
+      "version": "3.31.0",
+      "fileSize": "158 MB",
+      "androidRequirement": "Android 6.0 and up",
+      "packageName": "com.kiloo.subwaysurf",
+      "downloadUrl": "https://example.com/download/subway-surfers-v3.31.0.apk",
+      "rating": 4.6,
+      "ratingCount": 65000,
+      "downloadCount": 1200001,
+      "published": true,
+      "featured": true,
+      "whatsNew": "Welcome to Subway Surfers World Tour: Rio! Unlock the Samba Hoverboard and new street runner costumes.",
+      "previousVersions": [],
+      "createdAt": "2026-02-12T07:00:00Z",
+      "updatedAt": "2026-09-10T12:00:00Z"
+    },
+    {
+      "id": "app-duolingo",
+      "name": "Duolingo: Language Lessons",
+      "slug": "duolingo-language-lessons",
+      "developer": "Duolingo",
+      "categoryId": "cat-education",
+      "categoryName": "Education",
+      "isGame": false,
+      "icon": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=160&auto=format&fit=crop&q=80",
+      "description": "Learn Spanish, French, German, Italian, Japanese, Korean, and 30+ other languages with fun, bite-sized lessons. Practice speaking, reading, listening, and writing to build your vocabulary and grammar skills.\n\nDesigned by language specialists and backed by science, Duolingo makes education accessible and delightfully gamified.",
+      "features": [
+        "Bite-sized game-like lessons designed for quick daily learning",
+        "Speech recognition for real-time pronunciation feedback",
+        "Daily streaks and XP leaderboards to keep you motivated",
+        "Personalized review sessions to reinforce challenging words",
+        "Completely free core curriculum for all world languages"
+      ],
+      "screenshots": [
+        "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&auto=format&fit=crop&q=80"
+      ],
+      "version": "6.12.3",
+      "fileSize": "48.9 MB",
+      "androidRequirement": "Android 8.0 and up",
+      "packageName": "com.duolingo",
+      "downloadUrl": "https://example.com/download/duolingo-v6.12.3.apk",
+      "rating": 4.8,
+      "ratingCount": 52000,
+      "downloadCount": 940000,
+      "published": true,
+      "featured": false,
+      "whatsNew": "Added intermediate storytelling modules for Japanese and Spanish curricula. Enhanced audio clarity.",
+      "previousVersions": [],
+      "createdAt": "2026-03-05T09:30:00Z",
+      "updatedAt": "2026-08-20T15:00:00Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": "cat-tools",
+      "name": "Tools",
+      "slug": "tools",
+      "description": "Essential utilities, file managers, and system enhancements.",
+      "iconName": "Wrench",
+      "isGame": false
+    },
+    {
+      "id": "cat-productivity",
+      "name": "Productivity",
+      "slug": "productivity",
+      "description": "Office suites, notes, task managers, and workflow boosters.",
+      "iconName": "Briefcase",
+      "isGame": false
+    },
+    {
+      "id": "cat-social",
+      "name": "Social",
+      "slug": "social",
+      "description": "Connect with friends, social networks, and community spaces.",
+      "iconName": "Users",
+      "isGame": false
+    },
+    {
+      "id": "cat-communication",
+      "name": "Communication",
+      "slug": "communication",
+      "description": "Instant messaging, video conferencing, and VoIP calling.",
+      "iconName": "MessageSquare",
+      "isGame": false
+    },
+    {
+      "id": "cat-media",
+      "name": "Video & Audio",
+      "slug": "video-audio",
+      "description": "High-definition media players, podcast players, and streaming.",
+      "iconName": "PlayCircle",
+      "isGame": false
+    },
+    {
+      "id": "cat-photography",
+      "name": "Photography",
+      "slug": "photography",
+      "description": "Photo editing, camera tools, and visual creative suites.",
+      "iconName": "Camera",
+      "isGame": false
+    },
+    {
+      "id": "cat-education",
+      "name": "Education",
+      "slug": "education",
+      "description": "Language learning, science tools, and interactive tutorials.",
+      "iconName": "GraduationCap",
+      "isGame": false
+    },
+    {
+      "id": "cat-finance",
+      "name": "Finance",
+      "slug": "finance",
+      "description": "Budget trackers, currency converters, and investment trackers.",
+      "iconName": "DollarSign",
+      "isGame": false
+    },
+    {
+      "id": "cat-utilities",
+      "name": "Utilities",
+      "slug": "utilities",
+      "description": "Handy mobile calculators, sensors, battery tools, and benchmarks.",
+      "iconName": "Sliders",
+      "isGame": false
+    },
+    {
+      "id": "cat-action",
+      "name": "Action Games",
+      "slug": "action-games",
+      "description": "Fast-paced combat, platformers, and shooting games.",
+      "iconName": "Zap",
+      "isGame": true
+    },
+    {
+      "id": "cat-adventure",
+      "name": "Adventure Games",
+      "slug": "adventure-games",
+      "description": "Immersive stories, exploration, and questing journeys.",
+      "iconName": "Compass",
+      "isGame": true
+    },
+    {
+      "id": "cat-arcade",
+      "name": "Arcade Games",
+      "slug": "arcade-games",
+      "description": "Retro classics, endless runners, and high-score chasers.",
+      "iconName": "Gamepad2",
+      "isGame": true
+    },
+    {
+      "id": "cat-puzzle",
+      "name": "Puzzle Games",
+      "slug": "puzzle-games",
+      "description": "Brain teasers, logic challenges, and mind benders.",
+      "iconName": "Puzzle",
+      "isGame": true
+    },
+    {
+      "id": "cat-racing",
+      "name": "Racing Games",
+      "slug": "racing-games",
+      "description": "High-speed motorsport, drifting, and street racing.",
+      "iconName": "Gauge",
+      "isGame": true
+    },
+    {
+      "id": "cat-simulation",
+      "name": "Simulation",
+      "slug": "simulation",
+      "description": "City builders, life simulations, and vehicle operators.",
+      "iconName": "Cpu",
+      "isGame": true
+    },
+    {
+      "id": "cat-strategy",
+      "name": "Strategy Games",
+      "slug": "strategy-games",
+      "description": "Tactical conquest, tower defense, and resource warfare.",
+      "iconName": "Shield",
+      "isGame": true
+    },
+    {
+      "id": "cat-casual",
+      "name": "Casual Games",
+      "slug": "casual-games",
+      "description": "Relaxing gameplay, match-3, and quick pick-up fun.",
+      "iconName": "Smile",
+      "isGame": true
+    }
+  ],
+  "reviews": [
+    {
+      "id": "rev-1",
+      "appId": "app-vlc",
+      "appName": "VLC Media Player",
+      "userName": "Marcus Sterling",
+      "rating": 5,
+      "comment": "The absolute gold standard for media playback on Android. Plays every strange codec I throw at it without lag.",
+      "status": "approved",
+      "createdAt": "2026-08-12T14:22:00Z"
+    },
+    {
+      "id": "rev-2",
+      "appId": "app-telegram",
+      "appName": "Telegram Messenger",
+      "userName": "Elena Rostova",
+      "rating": 5,
+      "comment": "Direct publisher APK is much faster and doesn’t get restricted. Downloading it directly through HushAPK link worked smoothly!",
+      "status": "approved",
+      "createdAt": "2026-08-28T09:14:00Z"
+    },
+    {
+      "id": "rev-3",
+      "appId": "app-obsidian",
+      "appName": "Obsidian Notes & Knowledge Base",
+      "userName": "Devin K.",
+      "rating": 5,
+      "comment": "Best markdown note taker hands down. My local vault synced perfectly.",
+      "status": "approved",
+      "createdAt": "2026-09-01T16:04:00Z"
+    }
+  ],
+  "reports": [],
+  "clicks": [
+    {
+      "id": "click-seed-1",
+      "appId": "app-vlc",
+      "appName": "VLC Media Player",
+      "date": "2026-09-22",
+      "time": "12:00:00",
+      "timestamp": 1790062764986,
+      "ipHash": "seed-ip-hash-1",
+      "userAgent": "Mozilla/5.0 (Android; Mobile)",
+      "categoryId": "cat-media"
+    },
+    {
+      "id": "click-seed-2",
+      "appId": "app-telegram",
+      "appName": "Telegram Messenger",
+      "date": "2026-09-22",
+      "time": "13:00:00",
+      "timestamp": 1790066364986,
+      "ipHash": "seed-ip-hash-2",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+      "categoryId": "cat-communication"
+    },
+    {
+      "id": "clk-1790069973406-jwb7",
+      "appId": "app-subway-surfers",
+      "appName": "Subway Surfers World Tour",
+      "date": "2026-09-22",
+      "time": "09:39:33",
+      "timestamp": 1790069973405,
+      "ipHash": "e0b78fef1a680155",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",
+      "categoryId": "cat-arcade"
+    },
+    {
+      "id": "clk-1790070168811-nney",
+      "appId": "app-1790070152135-wh3p",
+      "appName": "Google Flow",
+      "date": "2026-09-22",
+      "time": "09:42:48",
+      "timestamp": 1790070168811,
+      "ipHash": "e0b78fef1a680155",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",
+      "categoryId": "cat-tools"
+    },
+    {
+      "id": "clk-1790070385087-3q7q",
+      "appId": "app-asphalt",
+      "appName": "Asphalt Legends Racer",
+      "date": "2026-09-22",
+      "time": "09:46:25",
+      "timestamp": 1790070385087,
+      "ipHash": "1efb07736a7fe475",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",
+      "categoryId": "cat-racing"
+    },
+    {
+      "id": "clk-1790070554149-050r",
+      "appId": "app-1790070152135-wh3p",
+      "appName": "Google Flow",
+      "date": "2026-09-22",
+      "time": "09:49:14",
+      "timestamp": 1790070554149,
+      "ipHash": "e0b78fef1a680155",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",
+      "categoryId": "cat-tools"
+    }
+  ],
+  "activities": [
+    {
+      "id": "act-1790070963570-0zc6",
+      "action": "Password Changed",
+      "details": "User 'admin' changed their password.",
+      "adminEmail": "admin@hushapk.org",
+      "timestamp": "2026-09-22T09:56:03.570Z"
+    },
+    {
+      "id": "act-1790070963366-41yw",
+      "action": "Admin Login",
+      "details": "User 'admin' signed into admin portal.",
+      "adminEmail": "admin@hushapk.org",
+      "timestamp": "2026-09-22T09:56:03.366Z"
+    },
+    {
+      "id": "act-1790070963261-ksxg",
+      "action": "Password Changed",
+      "details": "User 'admin' changed their password.",
+      "adminEmail": "admin@hushapk.org",
+      "timestamp": "2026-09-22T09:56:03.261Z"
+    },
+    {
+      "id": "act-1790070963033-6noq",
+      "action": "Admin Login",
+      "details": "User 'admin' signed into admin portal.",
+      "adminEmail": "admin@hushapk.org",
+      "timestamp": "2026-09-22T09:56:03.033Z"
+    },
+    {
+      "id": "act-1790070956411-boan",
+      "action": "Admin Login",
+      "details": "User 'admin' signed into admin portal.",
+      "adminEmail": "admin@hushapk.org",
+      "timestamp": "2026-09-22T09:55:56.411Z"
+    },
+    {
+      "id": "act-1790070951949-wprh",
+      "action": "Admin Login",
+      "details": "User 'admin' signed into admin portal.",
+      "adminEmail": "admin@hushapk.org",
+      "timestamp": "2026-09-22T09:55:51.949Z"
+    },
+    {
+      "id": "act-1790070896092-7lvt",
+      "action": "Admin Login",
+      "details": "User 'admin' signed into admin portal.",
+      "adminEmail": "admin@hushapk.org",
+      "timestamp": "2026-09-22T09:54:56.092Z"
+    },
+    {
+      "id": "act-1790070645264-o4d4",
+      "action": "Admin Login",
+      "details": "User 'admin' signed into admin portal.",
+      "adminEmail": "admin@hushapk.org",
+      "timestamp": "2026-09-22T09:50:45.264Z"
+    },
+    {
+      "id": "act-1790070542343-p0tq",
+      "action": "App Updated",
+      "details": "Updated application 'Google Flow'.",
+      "adminEmail": "admin@hushapk.org",
+      "timestamp": "2026-09-22T09:49:02.343Z"
+    },
+    {
+      "id": "act-1790070510543-jnn5",
+      "action": "Admin Login",
+      "details": "User 'admin' signed into admin portal.",
+      "adminEmail": "admin@hushapk.org",
+      "timestamp": "2026-09-22T09:48:30.543Z"
+    },
+    {
+      "id": "act-1790070152136-18dp",
+      "action": "App Created",
+      "details": "Created application 'Google Flow'.",
+      "adminEmail": "admin@hushapk.org",
+      "timestamp": "2026-09-22T09:42:32.136Z"
+    },
+    {
+      "id": "act-1790069984729-8941",
+      "action": "Admin Login",
+      "details": "User 'admin' signed into admin portal.",
+      "adminEmail": "admin@hushapk.org",
+      "timestamp": "2026-09-22T09:39:44.729Z"
+    },
+    {
+      "id": "act-1",
+      "action": "System Initialized",
+      "details": "HushAPK database seeded with initial verified applications.",
+      "adminEmail": "admin@hushapk.org",
+      "timestamp": "2026-09-22T09:39:24.986Z"
+    }
+  ],
+  "settings": {
+    "siteName": "HushAPK",
+    "tagline": "Safe Apps. Simple Downloads.",
+    "description": "HushAPK is a curated software directory providing verified application metadata and safe publisher download links. We never host or alter installation files.",
+    "logoUrl": "",
+    "faviconUrl": "",
+    "contactEmail": "contact@hushapk.org",
+    "socialLinks": {
+      "twitter": "https://twitter.com/hushapk",
+      "telegram": "https://t.me/hushapk",
+      "github": "https://github.com/hushapk"
+    },
+    "footerText": "© 2026 HushAPK Directory. All trademarks, service marks and company names are properties of their respective owners. HushAPK does not host APK packages.",
+    "defaultSeoTitle": "HushAPK - Safe Apps. Simple Downloads.",
+    "defaultSeoDescription": "Browse useful apps and games from HushAPK. Find verified app specifications and follow direct publisher download links safely.",
+    "googleAnalyticsId": "",
+    "themePreference": "dark"
+  },
+  "users": [
+    {
+      "id": "usr-admin-1",
+      "username": "admin",
+      "email": "admin@hushapk.org",
+      "role": "super_admin",
+      "passwordHash": "$2b$10$GyTf4X9kMN.f.TAISsEEnOtNw7S3CbCS7blhi/0XvNTpq0NvFdMXq",
+      "createdAt": "2026-09-22T09:39:24.986Z",
+      "lastLogin": "2026-09-22T09:39:24.986Z"
+    }
+  ]
+}
